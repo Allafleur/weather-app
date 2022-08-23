@@ -4,11 +4,150 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Weather prognosis</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+     <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/808c9ddbbc.js" crossorigin="anonymous"></script>
+    
   </head>
   <body>
-    <h1>Hello</h1>
-    <script src="script.js"></script>
+    
+    <div class="container">
+       
+      <div class="card">
+        <div class="card-body">
+             
+          <form id="button">
+            <input type="search" id="enter-city" placeholder="Type a city.." />
+            <input type="submit" id= "search-button" value="Search" class="btn btn-primary" />
+            <input type="submit" id= "current-city" value="Current city" class="btn btn-success" />
+          </form>
+          <h1 id="show-city"></h1>
+          <br />
+
+          <h3 id="current-date"></h3>
+          <h5 id="description"></h5>
+          <div class="row">
+            <div class="col-5">
+                <h1>
+                <span id="temperature"></span>
+                <span class="units" id="temp">
+                  <a href="#" id="celcius-link">°C</a> | 
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+                <br />
+                ☀️
+                </h1>
+            </div>
+            <div class="col-5">
+                <ul>
+                    <li>Humidity: <span id="humidity"> </span> %
+                   </li>
+                    <li>Wind:  <span id="wind"></span> km/h</li>
+                    <li>Sunrise: <span id="sunrise"> 4:57 </span>AM</li>
+                    <li> Sunset: <span id="sunset"> 8:59 </span> PM</li>
+                </ul>
+            </div>
+          </div>
+          
+
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Saturday</h5>
+                  <p class="card-text">
+                     <h1>
+                     28°C
+                    <br />
+                        ☀️
+                    </h1>
+                  </p>
+                 </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sunday</h5>
+                  <p class="card-text">
+                     <h1>
+                     25°C
+                    <br />
+                        ☀️
+                    </h1>
+                  </p>
+                 </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Monday</h5>
+                  <p class="card-text">
+                     <h1>
+                     20°C
+                    <br />
+                        ⛅ 
+                    </h1>
+                  </p>
+                 </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" >
+                <div class="card-body">
+                  <h5 class="card-title">Thuesday</h5>
+                  <p class="card-text">
+                     <h1>
+                     18°C
+                    <br />
+                     <i class="fa-solid fa-cloud-rain rainy"></i>
+                        
+                    </h1>
+                  </p>
+                 </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Wednesday</h5>
+                  <p class="card-text">
+                     <h1>
+                     20°C
+                    <br />
+                        ☀️
+                    </h1>
+                  </p>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <p>Coded by Alla Sydorenko</p>
+        </div>
+        
+      </div>
+      
+    </div>
+ <script src="src/script.js"></script>
   </body>
 </html>
