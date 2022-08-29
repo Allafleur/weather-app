@@ -10,14 +10,14 @@ p {
   margin-bottom: 0px;
 }
 body {
-  background-image: url("../images/leafs.jpg");
+  background-image: url("images/leafs.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   font-family: "PT Serif", serif;
 }
 .card-body {
-  background-image: url("../images/sky2.jpg");
+  background-image: url("images/sky2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
