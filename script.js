@@ -62,7 +62,8 @@ function defaultCity() {
 }
 defaultCity();
 
-function searchCity() {
+function searchCity(event) {
+  event.preventDefault();
   let city = document.querySelector("#enter-city").value;
   if (city) {
     let apiKey = "a106d60ef865934fed5a96e8563d9489";
