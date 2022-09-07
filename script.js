@@ -35,7 +35,7 @@ function showTemperature(response) {
   document.querySelector("#show-city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#celcius-link");
-  temperatureElement.innerHTML = `${temperature}°C`;
+  temperatureElement.innerHTML = `${temperature}`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -85,7 +85,7 @@ function showCurrentLocation() {
     let cityName = document.querySelector("#show-city");
     cityName.innerHTML = `${city}`;
     let h1 = document.querySelector("#celcius-link");
-    h1.innerHTML = `${temperature}°C`;
+    h1.innerHTML = `${temperature}`;
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind").innerHTML = Math.round(
       response.data.wind.speed

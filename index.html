@@ -30,9 +30,10 @@
   </head>
   <body>
     
-    <div class="container">
-       
-      <div class="card">
+  <div class="container">
+    <div class="wrapper">
+      <div class="weather-app">
+       <div class="card">
         <div class="card-body">
              
           <form id="button">
@@ -41,20 +42,17 @@
             <input type="submit" id= "current-city" value="Current city" class="btn btn-success" />
           </form>
           <h1 id="show-city"></h1>
-          <br />
-
-          <h3 id="current-date"></h3>
-          <h5 id="description"></h5>
+          <h2 id="current-date"></h2>
+          <h3 id="description"></h3>
           <div class="row">
             <div class="col-5">
                 <h1>
+                  ☀️
                 <span id="temperature"></span>
-                <span class="units" id="temp">
-                  <a href="#" id="celcius-link">°C</a> | 
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span>
-                <br />
-                ☀️
+                  <span id="temp">
+                    <a href="#" id="celcius-link"></a>
+                    <span class="units">°C | <a href="#" id="fahrenheit-link">°F</a></span>  
+                  </span> 
                 </h1>
             </div>
             <div class="col-5">
@@ -67,8 +65,6 @@
                 </ul>
             </div>
           </div>
-          
-
           <div class="row">
             <div class="col">
               <div class="card">
@@ -141,14 +137,17 @@
                  </div>
               </div>
             </div>
-          </div>
-                <p>Coded by Alla Sydorenko</p>
-                <a href="https://github.com/Allafleur/weather-app">Link to Github</a>
+          </div>        
         </div>
-        
+      </div>  
+      <small>
+      <a href="https://github.com/Allafleur/weather-app" target="_blank">Open-sourced code</a>
+       by Alla Sydorenko
+      </small>
       </div>
-      
     </div>
+   </div>
  <script src="script.js"></script>
+
   </body>
 </html>
