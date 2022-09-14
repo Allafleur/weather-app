@@ -36,8 +36,8 @@
        <div class="card">
         <div class="card-body">
              
-          <form id="button">
-            <input type="search" id="enter-city" placeholder="Type a city.." />
+          <form id="search-form">
+            <input type="search" id="enter-city" placeholder="Type a city.." autocomplete="off" />
             <input type="submit" id= "search-button" value="Search" class="btn btn-primary" />
             <input type="submit" id= "current-city" value="Current city" class="btn btn-success" />
           </form>
@@ -45,17 +45,21 @@
           <h2 id="current-date"></h2>
           <h3 id="description"></h3>
           <div class="row">
-            <div class="col-5">
-                <h1>
-                  ☀️
+            <div class="col-6">
+              <h1>
+                <div class="clearfix weather-temp">
+                <img src="" alt="Clear" id="icon" class="float-left" />
                 <span id="temperature"></span>
                   <span id="temp">
-                    <a href="#" id="celcius-link"></a>
-                    <span class="units">°C | <a href="#" id="fahrenheit-link">°F</a></span>  
+                    <a href="#" id="celcius-link" ></a>
+                    <span class="units">
+                      <a href="#" id="celcius" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a>
+                    </span>  
                   </span> 
+                </div>
                 </h1>
             </div>
-            <div class="col-5">
+            <div class="col-6">
                 <ul>
                     <li>Humidity: <span id="humidity"> </span> %
                    </li>

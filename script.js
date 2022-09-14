@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -21,20 +22,17 @@ function formatDate(date) {
   let month = date.getMonth() + 1;
   return `${day}, ${daynumber}.${month}, ${hours}:${minutes}`;
 }
-let now = new Date();
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = formatDate(now);
 
 function showTemperature(response) {
-  console.log(response);
+  // console.log(response);
   /*if (response.data.name) {
     document.querySelector("#show-city").innerHTML = response.data.name;
   } else {
     alert("Please type a real city name");
   }*/
   document.querySelector("#show-city").innerHTML = response.data.name;
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureElement = document.querySelector("#celcius-link");
+  celciusTemperature = response.data.main.temp;
+  let temperature = Math.round(celciusTemperature);
   temperatureElement.innerHTML = `${temperature}`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -42,17 +40,34 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  let dateElement = document.querySelector("#current-date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
   //document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
   //document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
-
-  function convertFahrenheit() {
-    if (fahrenheit.addEventListener) {
-      fahrenheit.innerHTML = Math.round((temperature * 9) / 5 + 32);
-    }
-  }
-  let fahrenheit = document.querySelector("#fahrenheit-link");
-  fahrenheit.addEventListener("click", convertFahrenheit);
 }
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  //celciusLink.classList.remove("active");
+  // fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
+}
+function displayCelcius(event) {
+  event.preventDefault();
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusTemperature = null;
+let temperatureElement = document.querySelector("#celcius-link");
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", displayFahrenheit);
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", displayCelcius);
 
 function defaultCity() {
   let city = "Vienna";
@@ -78,7 +93,8 @@ let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", searchCity);
 
 //5week
-function showCurrentLocation() {
+function showCurrentLocation(event) {
+  event.preventDefault();
   function showCurrentTemperature(response) {
     let temperature = Math.round(response.data.main.temp);
     let city = response.data.name;

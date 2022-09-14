@@ -20,16 +20,20 @@ a {
 #celcius-link {
   margin-left: 5px;
 }
-#celcius-link,
-#fahrenheit-link {
+.weather-temp #celcius-link {
   color: #6d42c7;
 }
-.units {
+.weather-temp .units {
   color: #6d42c7;
   position: relative;
   margin-left: -5px;
   font-size: 20px;
   top: -10px;
+}
+
+.weather-temp .active {
+  color: #6d42c7;
+  cursor: default;
 }
 p {
   text-align: center;
