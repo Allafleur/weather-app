@@ -54,17 +54,19 @@ function showTemperature(response) {
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  //celciusLink.classList.remove("active");
-  // fahrenheitLink.classList.add("active");
+  celcius.classList.remove("active");
+  fahrenheit.classList.add("active");
   temperatureElement.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
 }
 function displayCelcius(event) {
   event.preventDefault();
+  fahrenheit.classList.remove("active");
+  celcius.classList.add("active");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 let celciusTemperature = null;
 let temperatureElement = document.querySelector("#celcius-link");
-let fahrenheit = document.querySelector("#fahrenheit-link");
+let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", displayFahrenheit);
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", displayCelcius);
