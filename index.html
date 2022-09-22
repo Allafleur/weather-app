@@ -30,13 +30,12 @@
   </head>
   <body>
     
-  <div class="container">
-    <div class="wrapper">
-      <div class="weather-app">
-       <div class="card">
+<div class="container">
+  <div class="wrapper">
+    <div class="weather-app">
+      <div class="card">
         <div class="card-body">
-             
-          <form id="search-form">
+           <form id="search-form">
             <input type="search" id="enter-city" placeholder="Type a city.." autocomplete="off" />
             <input type="submit" id= "search-button" value="Search" class="btn btn-primary" />
             <input type="submit" id= "current-city" value="Current city" class="btn btn-success" />
@@ -61,96 +60,26 @@
             <div class="col-6">
                 <ul>
                     <li>Humidity: <span id="humidity"> </span> %
-                   </li>
+                    </li>
                     <li>Wind:  <span id="wind"></span> km/h</li>
-                    <li>Sunrise: <span id="sunrise"> 4:57 </span>AM</li>
-                    <li> Sunset: <span id="sunset"> 8:59 </span> PM</li>
+                    <li>Sunrise: <span id="sunrise"> </span>AM</li>
+                    <li> Sunset: <span id="sunset">  </span> PM</li>
                 </ul>
-            </div>
+            </div> 
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Saturday</h5>
-                  <p class="card-text">
-                     <h1>
-                     28°C
-                    <br />
-                        ☀️
-                    </h1>
-                  </p>
-                 </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Sunday</h5>
-                  <p class="card-text">
-                     <h1>
-                     25°C
-                    <br />
-                        ☀️
-                    </h1>
-                  </p>
-                 </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Monday</h5>
-                  <p class="card-text">
-                     <h1>
-                     20°C
-                    <br />
-                        ⛅ 
-                    </h1>
-                  </p>
-                 </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" >
-                <div class="card-body">
-                  <h5 class="card-title">Thuesday</h5>
-                  <p class="card-text">
-                     <h1>
-                     18°C
-                    <br />
-                     <i class="fa-solid fa-cloud-rain rainy"></i>
-                        
-                    </h1>
-                  </p>
-                 </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Wednesday</h5>
-                  <p class="card-text">
-                     <h1>
-                     20°C
-                    <br />
-                        ☀️
-                    </h1>
-                  </p>
-                 </div>
-              </div>
-            </div>
-          </div>        
+          <div class="weather-forecast" id="forecast">
+            
+          </div> 
         </div>
-      </div>  
-      <small>
-      <a href="https://github.com/Allafleur/weather-app" target="_blank">Open-sourced code</a>
-       by Alla Sydorenko
-      </small>
       </div>
-    </div>
-   </div>
- <script src="script.js"></script>
-
-  </body>
+    </div> 
+  </div> 
+    <small>
+    <a href="https://github.com/Allafleur/weather-app" target="_blank">Open-sourced code</a>
+    by Alla Sydorenko
+    </small>
+</div>
+  
+<script src="script.js"></script>
+</body>
 </html>
