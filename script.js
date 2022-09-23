@@ -20,7 +20,7 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   let daynumber = date.getDate();
   let month = date.getMonth() + 1;
-  return `${day}, ${daynumber}.${month}, ${hours}:${minutes}`;
+  return `Last updated: ${day}, ${daynumber}.${month}, ${hours}:${minutes}`;
 }
 function formatDateSun(timestamp) {
   let date = new Date(timestamp * 1000);

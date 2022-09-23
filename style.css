@@ -3,16 +3,21 @@
   margin: 20px auto;
 }
 h1 {
-  font-size: 37px;
+  font-size: 45px;
   font-weight: 100;
+  color: #455d7a;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
 h2,
 h3 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 100;
+  color: #455d7a;
 }
 li {
   list-style-type: none;
+  opacity: 0.9;
 }
 a {
   text-decoration: none;
@@ -21,25 +26,25 @@ a {
   margin-left: 5px;
 }
 .weather-temp #celcius-link {
-  color: #6d42c7;
+  color: rgb(33, 33, 33);
 }
 .weather-temp .units {
-  color: #6d42c7;
   position: relative;
   margin-left: -5px;
   font-size: 20px;
-  top: -10px;
+  top: -19px;
 }
 
 .weather-temp .active {
-  color: #6d42c7;
+  color: rgb(33, 33, 33);
   cursor: default;
 }
 p {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin-top: -10px;
+  color: white;
 }
+
 body {
   background-image: url("images/leafs.jpg");
   background-repeat: no-repeat;
@@ -56,18 +61,17 @@ body {
 .col {
   text-align: center;
 }
-.rainy {
-  color: #f5f9ee;
-}
 .wrapper {
   margin: 0 auto;
 }
 
 .weather-forecast-date {
-  font-size: 24px;
+  font-size: 21px;
+  color: #455d7a;
 }
 .weather-forecast-temperatures {
-  font-size: 20px;
+  font-size: 18px;
+  margin-top: -10px;
 }
 .forecast-temp-min {
   opacity: 0.8;
